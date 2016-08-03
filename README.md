@@ -11,6 +11,7 @@
 3. [ES6入门](http://es6.ruanyifeng.com)
 4. [学习ES6](http://babeljs.cn/)
 5. [vue-loader](http://vue-loader.vuejs.org/en/configurations/advanced.html)
+6. [vue-router](http://router.vuejs.org/zh-cn/basic.html)
 
 ## 易错点
 1. `.babelrc`文件用于引入vue模块

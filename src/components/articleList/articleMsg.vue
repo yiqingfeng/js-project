@@ -2,19 +2,26 @@
 <article class="m-article">
 	<header>
 		<span class="glyphicon glyphicon-time"></span>
-		<span class="date">2015-05-12</span>
+		<span class="date">{{article.date}}</span>
 	</header>
 	<div class="module">
-		<a class="title" href="#">Javascript 总结</a>
-		<p>超级长图，小心流量。</p>
-		<a class="readmore" href="#">Read More</a>
+		<a class="title" v-link="{ name: 'article', params: { id: 123 }}">{{article.title}}</a>
+		<p>{{article.sumary}}</p>
+		<a class="readmore" v-link="{ name: 'article', params: { id: 123 }}">Read More</a>
 		<footer>
-			<a class="tag" href="javascript:;"><span class="glyphicon glyphicon-tag">&nbsp;</span><span class="tag-content">a123</span></a>
-			<a class="tag" href="javascript:;"><span class="glyphicon glyphicon-tag">&nbsp;</span><span class="tag-content">a123</span></a>
+			<a class="tag" href="javascript:;" v-for="tag in article.tags">
+				<span class="glyphicon glyphicon-tag">&nbsp;</span><span class="tag-content">{{tag}}</span>
+			</a>
 		</footer>
 	</div>
 </article>
 </template>
+
+<script>
+export default {
+	props: ['article']
+}
+</script>
 
 <style lang="less">
 // 文章单个列表
