@@ -1,10 +1,14 @@
+// 引入bootstrap css库
+require('bootstrap/less/bootstrap.less');
+require('./assets/css/all.less');
+
 import Vue from 'vue'
-import App from './App'
+import $ from 'jquery'
+// import App from './App'
+// 避免提前加载组件样式
+var App = require('./App');
 
-/* eslint-disable no-new */
 new Vue({
-  el: 'body',
-  components: { App }
+	el: 'body',
+	components: { App }
 })
-
-alert(12312);
